@@ -1,0 +1,176 @@
+<?php
+    include 'inc_head.php';
+    include 'dbconnect.php';
+
+    if (! $jb_login) {
+        echo("<script>location.href='./login.html';</script>"); 
+      }
+
+    if (isset($jb_company)) {
+        if ( $_SESSION['master'] == 1 ) {
+            echo("<script>location.href='./index.html';</script>"); 
+          }
+          else {
+            echo("<script>location.href='./index_user.html';</script>"); 
+          }
+        }
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Aloha - 회사선택</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+     <!-- Custom styles for this page -->
+     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+     
+    
+    
+     <style>
+        .clicked 
+        {
+            color: #008000;
+        }
+     </style>
+
+</head>
+
+<body class="bg-gradient-primary">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div class="container">
+        <br>
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">회사를 선택해 주세요!</h1>
+                            </div>
+                            <br>
+                            <form method="post" action="company_result.php">
+                                <input type = hidden name = "slc_com" id="slc_com">
+                                <div class="card shadow mb-4">
+                            
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 100px; color:#fff; background-color:#4e73df;">회사</th>
+                                                        <th style="width: 100px; color:#fff; background-color:#4e73df;">선택하기</th>
+                                                    </tr>
+                                                </thead>
+                            
+                                                <tbody>
+                                                    <?php
+                                                    $conn = mysqli_connect($host, $user, $pw, $dbName);
+                                                    $sql = "SELECT companyname FROM companyLIST WHERE confirm = 1";
+        
+                                                    $result = mysqli_query($conn, $sql);
+                                                    if (mysqli_num_rows($result) > 0) 
+                                                    {
+                                                        while($row = mysqli_fetch_assoc($result)) 
+                                                        {
+                                                            echo "<tr class='cnf'>";
+                                                            echo "<td class='com'>".$row["companyname"]."</td>";
+                                                            echo('
+                                                            <td>
+                                                                
+                                                                <a href="#" class="btn btn-primary btn-icon-split">
+                                                                    <span class="icon text-white-50">
+                                                                        <i class="fas fa-flag"></i>
+                                                                    </span>
+                                                                    <span class="text">선택</span>
+                                                                </a>
+                                                                
+                                                            </td>');
+                                                            echo "</tr>";
+                                                        }
+                                                    }
+                                                    mysqli_close($conn); 
+                                                                                                                                                            
+                                                        ?>
+                                                    <script>
+                                                        $(".text").click(function () {
+
+                                                            var checkBtn = $(this);
+
+                                                            // checkBtn.parent() : checkBtn의 부모는 <td>이다.
+                                                            // checkBtn.parent().parent() : <td>의 부모이므로 <tr>이다.
+                                                            var comf = checkBtn.parent().parent().parent();
+
+                                                            $(comf.children().closest(".com")).css({ color: '#fff', backgroundColor: '#a840ff' }); //클릭한 버튼 글자색은 #ffff,바탕은 #111
+
+                                                            $('com, td').not(comf.children().closest(".com")).css({ color: '#111', backgroundColor: '#fff' });
+
+                                                            var comName = comf.children().closest(".com").text();
+
+                                                            $('#slc_com').val(comName);
+                                                            
+
+                                                        });
+                                                    </script>
+                            
+                                                </tbody>
+                            
+                            
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <br>
+                                    <a class="btn btn-primary btn-user btn-block" input type="submit">
+                                        <b><input type="submit" value="완료" style="color:#fff; background-color:#4e73df; border: none; width: 100%;"></b>
+                                    </a>
+                                    
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <br>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    
+
+</body>
+
+</html>

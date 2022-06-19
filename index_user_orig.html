@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Aloha Check</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/55a4d4c7a4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <!-- <i class="fas fa-laugh-wink"></i> -->
+                    <i class="fa-brands fa-black-tie"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3"> Aloha <sup>2</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>근무정책</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">근무정책</h6>
+                        <a class="collapse-item" href="buttons.html">근무정책1</a>
+                        <a class="collapse-item" href="cards.html">근무정책2</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                부가기능
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>회사</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>결재</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>공지</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <!-- Sidebar Message -->
+            <!-- <div class="sidebar-card d-none d-lg-flex">
+                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
+                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+            </div> -->
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->    
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 헤더 -->     
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <!-- <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."                     검색기능
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form> -->         
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                            alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">유하우</span>          <!-- 이름 및 직책 반영할 것 -->
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">관리자</span>          <!-- 이름 및 직책 반영할 것 -->
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid h-100">
+
+                    <!-- Content Row -->
+
+                    <div class="row" style="height: calc(100% - 130px);">
+                        
+                        <!-- Content Column -->
+                        <div class="col-lg-3 mb-5">
+
+                            <!-- 나의 근무 -->
+                            <div class="card shadow mb-4 h-100">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">나의 근무</h6>
+                                </div>
+                                <div class="card-body">
+                                    <!-- 오늘 날짜 자동으로 입력   -->
+                                    <div>
+                                        <h2>2022.05.10(월)</h2>
+                                    </div><br>
+                                    
+                                    <!-- 남은 근무시간 -->
+                                    <h3>근무</h3>
+                                    <div>
+                                        <h3>3시간 45분</h3>
+                                    </div><br>
+
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">남은 근무시간 
+                                        <span class="float-right">5시간 20분</span>
+                                    </h4><br>
+
+                                    <!-- 출근한 시간 및 퇴근한 시간 --> 
+                                    <div class="work" style="width: 100%;">
+                                        <div>
+                                            <i class="fa-solid fa-business-time" style="font-size: 40px; color: #423069;"></i>
+                                            <p><b>출근</b><br>07:00</p>
+                                        </div>
+
+                                        <div>
+                                            <i class="fa-solid fa-house-chimney" style="font-size: 40px; color: #f35786;"></i>
+                                            <p><b>퇴근</b><br>07:00</p>
+                                        </div>
+                                    </div><br><br>
+
+                                    <!-- bar 그래프 -->
+                                    <div>
+                                        <canvas id="bar-chart" width="500" height="600"></canvas>
+                                    </div>
+
+                                    <!-- 출근한 시간 및 퇴근한 시간 -->
+                                    <div>
+
+                                    </div>
+
+                                    <!-- 출근한 시간 및 퇴근한 시간 -->
+                                    <div>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <!-- Pie Chart -->
+                        <form action="#" class="col-xl-7 col-lg-5">
+
+                            <div class="row">
+                                <!-- Pie Chart -->
+                                <div class="col-xl-12 col-lg-6">
+                                    <div class="card shadow mb-4">
+                                        <!-- Card Header - Dropdown -->
+                                        <div
+                                            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                            <h6 class="m-0 font-weight-bold text-primary">근무시간</h6>
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div id="cb1" class="card-body">
+                                            <div class="chart-pie pt-4 pb-2" style="display: inline-block; width: 300px;">
+                                                <canvas id="myPieChart" ></canvas>
+                                                <div class="chart-txt">
+                                                    <h3>160시간</h3>
+                                                    <p>총 근무시간</p>   
+                                                </div>
+                                                <div class="mt-4 text-center small">
+                                                    <span class="mr-2">
+                                                        <i class="fas fa-circle text-primary"></i> 출장
+                                                    </span>
+                                                    <span class="mr-2">
+                                                        <i class="fas fa-circle text-success"> </i> 휴가
+                                                    </span>
+                                                    <span class="mr-2">
+                                                        <i class="fas fa-circle text-info"> </i> 출근
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="val1">
+                                                <div class="mt-4 text-600" style="font-size: 15px;">
+                                                    <span class="mr-2">
+                                                        <i class="fas fa-circle text-primary"></i> 목표한 근무시간의 진행 상태를 확인할 수 있습니다.
+                                                    </span>
+                                                </div>
+                                                <div class="mt-4">
+                                                    
+                                                    <table class="tbl1">
+                                                        <tr>
+                                                            <th rowspan="2">근무시간</th>
+                                                            <th>
+                                                                <span class="mr-2 text-left small">
+                                                                    <i class="fas fa-circle text-primary"></i> 나의 근무시간
+                                                                </span>
+                                                            </th>
+                                                            <th>
+                                                                <span class="mr-2 text-center small">
+                                                                    <i class="fas fa-circle text-success"></i> 휴식시간
+                                                                </span>
+                                                            </th>
+                                                            <th>
+                                                                <span class="mr-2  text-right small">
+                                                                    <i class="fas fa-circle text-info"></i> 남은 근무시간
+                                                                </span>
+                                                            </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p class="txtBox10bg">4시간 27분</p>      <!--  나의 근무시간  -->
+                                                            </td>
+                                                            <td>
+                                                                <p class="txtBox10bg">4시간 27분</p>       <!--  휴식시간  -->
+                                                            </td>
+                                                            <td>
+                                                                <p class="txtBox10bg">4시간 27분</p>        <!--  남은 근무시간  -->
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <!-- <span class="mr-2 text-left small">
+                                                        <i class="fas fa-circle text-primary"></i> 출장
+                                                    </span>
+                                                    <span class="mr-2 text-center small">
+                                                        <i class="fas fa-circle text-success"></i> 휴가
+                                                    </span>
+                                                    <span class="mr-2  text-right small">
+                                                        <i class="fas fa-circle text-info"></i> 출근
+                                                    </span> -->
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-10 progress mt-3 p-0">
+                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <p class="txtBox10bg2">미달</p> 
+                                                    </div>
+                                                </div>
+                                                
+                                                <h4 class="small font-weight-bold">남은 근무시간 
+                                                    <span class="float-right">5시간 20분</span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            
+                            <div class="row">
+                                <!-- 알림 -->
+                                <div class="col-xl-6 col-md-6 mb-4">
+                                    <div class="card shadow mb-4">
+                                        <!-- Card Header - Dropdown -->
+                                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                            <h6 class="m-0 font-weight-bold text-primary">알림</h6>
+                                            <div class="dropdown no-arrow">
+                                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                                    aria-labelledby="dropdownMenuLink">
+                                                    <div class="dropdown-header">Dropdown Header:</div>
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body pt-2 pb-1" id="notice">
+
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+
+                                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                                    <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png" class="h-4 w-4" />
+                                                </span>
+                        
+                                                <span class="text-default-d3 text-90 text-600">             <!--이름 DB에서 불러올것-->
+                                                    유하우
+                                                </span>
+                                                <span class="grade">                                        <!--직책 DB에서 불러올것-->
+                                                    팀장
+                                                </span>
+                                                <span class="text-dark-l2 text-nowrap">
+                                                    님이 <span class="state">퇴근</span>하셨습니다.       <!--상태 DB에서 불러올것-->
+                                                </span>
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.02.09(월) 07:00                                    <!--현재시간 DB에서 불러올것-->
+                                                </span>
+
+                                            </div>
+                                            
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                                    <img alt="Derek's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png" class="h-4 w-4" />   <!--이미지 avatar2.png 숫자 바꾸기-->
+                                                </span>
+                        
+                                                <span class="text-default-d3 text-90 text-600">             <!--이름 DB에서 불러올것-->
+                                                    유하우
+                                                </span>
+                                                <span class="grade">                                        <!--직책 DB에서 불러올것-->
+                                                    팀장
+                                                </span>
+                                                <span class="text-dark-l2 text-nowrap">
+                                                    님이 <span class="state">퇴근</span>하셨습니다.       <!--상태 DB에서 불러올것-->
+                                                </span>
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.02.09(월) 07:00                                    <!--현재시간 DB에서 불러올것-->
+                                                </span>
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                                    <img alt="Antonio's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png" class="h-4 w-4" />
+                                                </span>
+                        
+                                                <span class="text-default-d3 text-90 text-600">             <!--이름 DB에서 불러올것-->
+                                                    유하우
+                                                </span>
+                                                <span class="grade">                                        <!--직책 DB에서 불러올것-->
+                                                    팀장
+                                                </span>
+                                                <span class="text-dark-l2 text-nowrap">
+                                                    님이 <span class="state">퇴근</span>하셨습니다.       <!--상태 DB에서 불러올것-->
+                                                </span>
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.02.09(월) 07:00                                    <!--현재시간 DB에서 불러올것-->
+                                                </span>
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                                    <img alt="Gabriel's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png" class="h-4 w-4" />
+                                                </span>
+                        
+                                                <span class="text-default-d3 text-90 text-600">             <!--이름 DB에서 불러올것-->
+                                                    유하우
+                                                </span>
+                                                <span class="grade">                                        <!--직책 DB에서 불러올것-->
+                                                    팀장
+                                                </span>
+                                                <span class="text-dark-l2 text-nowrap">
+                                                    님이 <span class="state">퇴근</span>하셨습니다.       <!--상태 DB에서 불러올것-->
+                                                </span>
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.02.09(월) 07:00                                    <!--현재시간 DB에서 불러올것-->
+                                                </span>
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                                    <img alt="David's avatar" src="https://bootdey.com/img/Content/avatar/avatar5.png" class="h-4 w-4" />
+                                                </span>
+                        
+                                                <span class="text-default-d3 text-90 text-600">             <!--이름 DB에서 불러올것-->
+                                                    유하우
+                                                </span>
+                                                <span class="grade">                                        <!--직책 DB에서 불러올것-->
+                                                    팀장
+                                                </span>
+                                                <span class="text-dark-l2 text-nowrap">
+                                                    님이 <span class="state">퇴근</span>하셨습니다.       <!--상태 DB에서 불러올것-->
+                                                </span>
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.02.09(월) 07:00                                    <!--현재시간 DB에서 불러올것-->
+                                                </span>
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                                    <img alt="Jason's avatar" src="https://bootdey.com/img/Content/avatar/avatar6.png" class="h-4 w-4" />
+                                                </span>
+                        
+                                                <span class="text-default-d3 text-90 text-600">             <!--이름 DB에서 불러올것-->
+                                                    유하우
+                                                </span>
+                                                <span class="grade">                                        <!--직책 DB에서 불러올것-->
+                                                    팀장
+                                                </span>
+                                                <span class="text-dark-l2 text-nowrap">
+                                                    님이 <span class="state">퇴근</span>하셨습니다.       <!--상태 DB에서 불러올것-->
+                                                </span>
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.02.09(월) 07:00                                    <!--현재시간 DB에서 불러올것-->
+                                                </span>
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
+                                                    <img alt="Jason's avatar" src="https://bootdey.com/img/Content/avatar/avatar7.png" class="h-4 w-4" />
+                                                </span>
+                        
+                                                <span class="text-default-d3 text-90 text-600">             <!--이름 DB에서 불러올것-->
+                                                    유하우
+                                                </span>
+                                                <span class="grade">                                        <!--직책 DB에서 불러올것-->
+                                                    팀장
+                                                </span>
+                                                <span class="text-dark-l2 text-nowrap">
+                                                    님이 <span class="state">퇴근</span>하셨습니다.       <!--상태 DB에서 불러올것-->
+                                                </span>
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.02.09(월) 07:00                                    <!--현재시간 DB에서 불러올것-->
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- 공지 -->
+                                <div class="col-xl-6 col-md-6 mb-4">
+                                    <div class="card shadow mb-4">
+                                        <!-- Card Header - Dropdown -->
+                                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                            <h6 class="m-0 font-weight-bold text-primary">공지</h6>
+                                            <div class="dropdown no-arrow">
+                                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                                    aria-labelledby="dropdownMenuLink">
+                                                    <div class="dropdown-header">Dropdown Header:</div>
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body pt-2 pb-1" id="n_board">
+
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">  <!-- 반복문 돌려서 뿌려줄 것 -->
+
+                                                <span class="text-default-d3 text-90 text-600">
+                                                    회사 인사발령 공고          <!-- 게시판 제목 DB에서 가져올 것 -->
+                                                </span>
+                        
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.05.06(금)          <!-- 게시판 날짜 DB에서 가져올 것 -->
+                                                </span>
+                        
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+
+                                                <span class="text-default-d3 text-90 text-600">
+                                                    회사 인사발령 공고          <!-- 게시판 제목 DB에서 가져올 것 -->
+                                                </span>
+                        
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.05.06(금)          <!-- 게시판 날짜 DB에서 가져올 것 -->
+                                                </span>
+                    
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="text-default-d3 text-90 text-600">
+                                                    회사 인사발령 공고          <!-- 게시판 제목 DB에서 가져올 것 -->
+                                                </span>
+                        
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.05.06(금)          <!-- 게시판 날짜 DB에서 가져올 것 -->
+                                                </span>
+                        
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="text-default-d3 text-90 text-600">
+                                                    회사 인사발령 공고          <!-- 게시판 제목 DB에서 가져올 것 -->
+                                                </span>
+                        
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.05.06(금)          <!-- 게시판 날짜 DB에서 가져올 것 -->
+                                                </span>
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="text-default-d3 text-90 text-600">
+                                                    회사 인사발령 공고          <!-- 게시판 제목 DB에서 가져올 것 -->
+                                                </span>
+                        
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.05.06(금)          <!-- 게시판 날짜 DB에서 가져올 것 -->
+                                                </span>
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="text-default-d3 text-90 text-600">
+                                                    회사 인사발령 공고          <!-- 게시판 제목 DB에서 가져올 것 -->
+                                                </span>
+                        
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.05.06(금)          <!-- 게시판 날짜 DB에서 가져올 것 -->
+                                                </span>
+                                            </div>
+                                            <div role="button" class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
+                                                <span class="text-default-d3 text-90 text-600">
+                                                    회사 인사발령 공고          <!-- 게시판 제목 DB에서 가져올 것 -->
+                                                </span>
+                        
+                                                <span class="ml-auto text-dark-l2 text-nowrap">
+                                                    2022.05.06(금)          <!-- 게시판 날짜 DB에서 가져올 것 -->
+                                                </span> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                        
+
+                        <!-- 광고배너 -->
+                        <div class="col-xl-2 col-md-2 mb-2">
+                            <a href="https://event-us.kr/ysl34zrs82vl/event/22495"><img src="img/banner.svg" alt="ad" style="width: 100%;"></a>
+                        </div>
+                    
+<style>
+    .chart-pie{position:relative;}
+    .chart-pie .chart-txt{position:absolute; left:50%; top: 58%; transform:translate(-50%,-58%); text-align:center;}
+    .chart-pie .chart-txt h3{font-size:30px; color:#333; font-weight: 600; ;}
+    .chart-pie .chart-txt p{font-size:16px; color:#666; font-weight:500;}
+
+</style>
+                    <!-- Content Row -->
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+
+    <!--bar-demo -->
+    <script>
+        new Chart(document.getElementById("bar-chart"), {
+            type: 'bar',
+            data: {
+            labels: ["휴식", "외근", "연장근무"],
+            datasets: [
+                {
+                label: "출석률 (days)",
+                backgroundColor: ["#4b1877", "#f6ca47","#f25785"],
+                data: [38,67,74]
+                }
+            ]
+            },
+            options: {
+            legend: { display: false },
+            title: {
+                // display: true,
+                // text: 'Predicted world population (millions) in 2050'
+            }
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
